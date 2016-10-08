@@ -1,4 +1,4 @@
-# head-elf
+# Head Elf
 
 This is a simple application to learn React.
 
@@ -9,7 +9,7 @@ Then, by mocking a backend with json-server, create the interactions with the ac
 
 The final step will be to build a backend with exprejs or hapi (not yet decided. But since express is more in usage... )
 
-## Head elf
+## What is Head Elf
 
 Christmas time is near, and the season brings the christams elves in Quebec region.
 
