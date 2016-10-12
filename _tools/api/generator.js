@@ -7,7 +7,7 @@ const getTricks = () => {
       return {
         id: n,
         title: faker.lorem.words(),
-        descriptions: faker.lorem.paragraph(),
+        description: faker.lorem.paragraph(),
         tags: _.times(3, () => {
           return faker.lorem.word()
         })

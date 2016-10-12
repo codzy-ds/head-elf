@@ -20,7 +20,25 @@
   font-size: large;
 }
 
+.content {
+  width:100%;
+  display: flex;
+}
+
+.side-bar {
+  width: 25%;
+}
+
+.side-image {
+  width: 100%;
+  height: 500px;
+}
+
+.main {
+  width: 75%;
+}
+
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotate(270deg); }
+  to { transform: rotate(90deg); }
 }
