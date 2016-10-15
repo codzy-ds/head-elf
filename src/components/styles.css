@@ -1,0 +1,199 @@
+.ctree {
+    background-color: #FFFFFF;
+    /*border: 1px solid black;*/
+    margin: 15px;
+    height: 350px;
+    position: relative;
+}
+.ctree .trunk {
+    border-color: brown transparent;
+    border-style: solid;
+    border-width: 0 14px 300px;
+    bottom: 0;
+    left: 50%;
+    height: 0px;
+    position: absolute;
+    width: 0;
+}
+.ctree .branches {
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+    border-color: green transparent;
+    border-style: solid;
+    border-width: 0 100px 120px;
+    bottom: 30px;
+    height: 0px;
+    left: 107px;
+    position: absolute;
+    width: 0;
+}
+.ctree .branches.middle {
+    border-bottom-left-radius: 50% 15px;
+    border-bottom-right-radius: 50% 15px;
+    border-width: 0 80px 100px;
+    bottom: 110px;
+    left: 128px;
+}
+.ctree .branches.top {
+    border-bottom-left-radius: 50% 12px;
+    border-bottom-right-radius: 50% 12px;
+    border-width: 0 60px 80px;
+    bottom: 185px;
+    left: 148px;
+}
+.ctree .band {
+    background-color: transparent;
+    border-color: red;
+    border-style: solid;
+    border-width: 6px;
+    border-radius: 103px;
+    clip: rect(152px, 260px, 260px, 82px);
+    margin-bottom: 15px;
+    height: 200px;
+    right: -55px;
+    margin-left: -165px;
+    position: absolute;
+    bottom: -120px;
+    width: 200px;
+    transform: rotate(3deg);
+}
+.ctree .middle .band {
+    bottom: -100px;
+    transform: rotate(3deg);
+    clip: rect(162px, 260px, 260px, 95px);
+    right: -55px;
+}
+.ctree .top .band {
+    bottom: -77px;
+    transform: rotate(3deg);
+    clip: rect(172px, 290px, 290px, 120px);
+    right: -50px;
+}
+.ctree .star {
+    border-color: yellow transparent;
+    border-style: solid;
+    border-width: 0 30px 21px;
+    -moz-border-end-style:dashed !important;
+    display: block;
+    height: 0px;
+    left: 180px;
+    position: absolute;
+    top: 60px;
+    -moz-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    width: 0px;
+}
+.star:before {
+    border-color: yellow transparent;
+    border-style: solid;
+    border-width: 0 9px 21px;
+    -moz-border-end-style:dashed !important;
+    content: '';
+    display: block;
+    height: 0;
+    left: -22px;
+    position: absolute;
+    top: -14px;
+    -moz-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -webkit-transform: rotate(-35deg);
+    transform:rotate(-35deg);
+    width: 0;
+}
+.star:after {
+    border-color: yellow transparent;
+    border-style: solid;
+    border-width: 0 30px 21px;
+    -moz-border-end-style:dashed !important;
+    content: '';
+    display: block;
+    height: 0px;
+    left: -34px;
+    position: absolute;
+    top: 3px;
+    -moz-transform: rotate(-70deg);
+    -ms-transform: rotate(-70deg);
+    -webkit-transform: rotate(-70deg);
+    transform: rotate(-70deg);
+    width: 0px;
+}
+
+.boule-rouge1 {
+  border-color: red;
+  background-color: red;
+  border-style: solid;
+  border-radius: 50%;
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 250px;
+  bottom: 50px;
+}
+
+.boule-rouge2 {
+  border-color: red;
+  background-color: red;
+  border-style: solid;
+  border-radius: 50%;
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 170px;
+  bottom: 150px;
+}
+
+.boule-bleue1 {
+  border-color: blue;
+  background-color: blue;
+  border-style: solid;
+  border-radius: 50%;
+  display: block;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 230px;
+  bottom: 120px;
+}
+
+.boule-bleue2 {
+  border-color: blue;
+  background-color: blue;
+  border-style: solid;
+  border-radius: 50%;
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 200px;
+  bottom: 190px;
+}
+
+.boule-argent1 {
+  border-color: silver;
+  background-color: silver;
+  border-style: solid;
+  border-radius: 50%;
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 175px;
+  bottom: 70px;
+}
+
+.boule-argent2 {
+  border-color: silver;
+  background-color: silver;
+  border-style: solid;
+  border-radius: 50%;
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 190px;
+  bottom: 230px;
+}

@@ -32,8 +32,10 @@ class Fortune extends React.Component {
       <h4>{trick.title}</h4>
       <p>{trick.description}</p>
       <div className="control">
-        <button className="refresh" onClick={this.handleRefresh}>Refresh</button>
-        <button className="search">Search</button>
+        <div className="buttons">
+          <button className="refresh" onClick={this.handleRefresh}><span className="arrow-refresh">&#x21bb;</span> Refresh</button>
+          <button className="search">Search</button>
+        </div>
       </div>
     </div>)
   }

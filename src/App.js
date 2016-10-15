@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Header from './containers/header'
 import Fortune from './containers/fortune/fortuneCtnr'
-import Intro from './containers/intro'
-import sideTree from '../public/pexels-photo-24228.jpg'
+import Intro from './containers/body/intro'
+import ChristmasTree from './components/christmasTree'
 import './App.css';
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
         <Header />
         <div className="content">
           <div className="side-bar">
-            <img src={sideTree} className="side-image" alt="logo" />
+            <ChristmasTree />
           </div>
           <div className="main">
             <Fortune />

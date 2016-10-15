@@ -16,4 +16,10 @@ const getTricks = () => {
   }
 }
 
-module.exports = () => Object.assign({}, getTricks())
+const getIntro = () => {
+  return {
+    info: {info: "Si vous voulez attraper un lutins, graillez-vous d'une batch de guimauves"}
+  }
+}
+
+module.exports = () => Object.assign({}, getTricks(), getIntro())
