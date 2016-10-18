@@ -10,6 +10,8 @@
 .App-header {
   background-color: #222;
   height: 185px;
+  width:auto;
+  overflow: hidden;
   color: white;
   display: flex;
   align-content: flex-end;
@@ -23,24 +25,19 @@
 .content {
   width:100%;
   display: flex;
+  flex-direction: row;
 }
 
 .side-bar {
-  width: 25%;
+  width: 20vw;
 }
 
 .side-image {
   width: 100%;
-  height: 500px;
 }
 
 .main {
   width: 75%;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(270deg); }
-  to { transform: rotate(90deg); }
 }
 
 /* General */
@@ -75,18 +72,12 @@
 /* Alernatively rotate them */
 #bauble-container li:nth-child(odd)
 {
-	-moz-transform: rotate(-5deg); /* Firefox */
-	-webkit-transform: rotate(-5deg); /* Chrome and Safari */
-	-o-transform: rotate(-5deg); /* Opera */
-	-ms-transform: rotate(-5deg); /* Surprise! IE9 with its own prefix */
+  transform: rotate(-5deg)
 }
 
 #bauble-container li:nth-child(even)
 {
-	-moz-transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
-	-o-transform: rotate(5deg);
-	-ms-transform: rotate(5deg);
+  transform: rotate(5deg)
 }
 
 /* Style the bauble */

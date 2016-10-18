@@ -9,8 +9,8 @@
     border-color: brown transparent;
     border-style: solid;
     border-width: 0 14px 300px;
-    bottom: 0;
-    left: 50%;
+    bottom: 0em;
+    left: 6em;
     height: 0px;
     position: absolute;
     width: 0;
@@ -21,9 +21,9 @@
     border-color: green transparent;
     border-style: solid;
     border-width: 0 100px 120px;
-    bottom: 30px;
+    bottom: 1.6em;
     height: 0px;
-    left: 107px;
+    left: .6em;
     position: absolute;
     width: 0;
 }
@@ -31,15 +31,15 @@
     border-bottom-left-radius: 50% 15px;
     border-bottom-right-radius: 50% 15px;
     border-width: 0 80px 100px;
-    bottom: 110px;
-    left: 128px;
+    bottom: 7em;
+    left: 1.9em;
 }
 .ctree .branches.top {
     border-bottom-left-radius: 50% 12px;
     border-bottom-right-radius: 50% 12px;
     border-width: 0 60px 80px;
-    bottom: 185px;
-    left: 148px;
+    bottom: 12em;
+    left: 3.1em;
 }
 .ctree .band {
     background-color: transparent;
@@ -70,23 +70,24 @@
     right: -50px;
 }
 .ctree .star {
-    border-color: yellow transparent;
+    border-color: GoldenRod transparent;
     border-style: solid;
     border-width: 0 30px 21px;
     -moz-border-end-style:dashed !important;
     display: block;
     height: 0px;
-    left: 180px;
+    left: 5.1em;
     position: absolute;
-    top: 60px;
+    top: 3.5em;
     -moz-transform: rotate(35deg);
     -ms-transform: rotate(35deg);
     -webkit-transform: rotate(35deg);
     transform: rotate(35deg);
     width: 0px;
 }
+
 .star:before {
-    border-color: yellow transparent;
+    border-color: GoldenRod transparent;
     border-style: solid;
     border-width: 0 9px 21px;
     -moz-border-end-style:dashed !important;
@@ -102,8 +103,9 @@
     transform:rotate(-35deg);
     width: 0;
 }
+
 .star:after {
-    border-color: yellow transparent;
+    border-color: GoldenRod transparent;
     border-style: solid;
     border-width: 0 30px 21px;
     -moz-border-end-style:dashed !important;
@@ -121,79 +123,105 @@
 }
 
 .boule-rouge1 {
-  border-color: red;
-  background-color: red;
-  border-style: solid;
+  background: #c8171f;
   border-radius: 50%;
   display: block;
   width: 15px;
   height: 15px;
   position: absolute;
-  left: 250px;
-  bottom: 50px;
+  left: 4em;
+  bottom: 4em;
+  animation: red-blue infinite 4s;
+  animation-direction: alternate;
 }
 
 .boule-rouge2 {
-  border-color: red;
   background-color: red;
-  border-style: solid;
   border-radius: 50%;
   display: block;
   width: 10px;
   height: 10px;
   position: absolute;
-  left: 170px;
-  bottom: 150px;
+  left: 9em;
+  bottom: 8em;
+  animation: red-blue infinite 2s;
+  animation-direction: alternate;
 }
 
 .boule-bleue1 {
-  border-color: blue;
   background-color: blue;
-  border-style: solid;
   border-radius: 50%;
   display: block;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   position: absolute;
-  left: 230px;
-  bottom: 120px;
+  left: 5em;
+  bottom: 9.5em;
+  animation: blue-red infinite 3s;
+  animation-direction: alternate;
 }
 
 .boule-bleue2 {
-  border-color: blue;
   background-color: blue;
-  border-style: solid;
-  border-radius: 50%;
-  display: block;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  left: 200px;
-  bottom: 190px;
-}
-
-.boule-argent1 {
-  border-color: silver;
-  background-color: silver;
-  border-style: solid;
   border-radius: 50%;
   display: block;
   width: 15px;
   height: 15px;
   position: absolute;
-  left: 175px;
-  bottom: 70px;
+  left: 7.5em;
+  bottom: 13em;
+  animation: blue-red infinite 4s;
+  animation-direction: alternate;
+}
+
+.boule-argent1 {
+  background-color: silver;
+  border-radius: 50%;
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 9em;
+  bottom: 3em;
+  animation: argent-white infinite 2s;
+  animation-direction: alternate;
 }
 
 .boule-argent2 {
-  border-color: silver;
   background-color: silver;
-  border-style: solid;
   border-radius: 50%;
   display: block;
   width: 10px;
   height: 10px;
   position: absolute;
-  left: 190px;
-  bottom: 230px;
+  left: 5.7em;
+  bottom: 14.5em;
+  animation: argent-white infinite 5s;
+  animation-direction: alternate;
+}
+
+@keyframes blue-red {
+  0%   {background-color: blue; }
+  25%  {background-color: yellow;}
+  50%  {background-color: white;}
+  100% {background-color: red;}
+}
+
+@keyframes red-blue {
+  0%   {background-color: red; }
+  25%  {background-color: pink;}
+  50%  {background-color: yellow;}
+  100% {background-color: blue;}
+}
+
+@keyframes argent-white {
+  0%   {background-color: argent; }
+  25%  {background-color: white;}
+  50%  {background-color: lightgreen;}
+  100% {background-color: black;}
+}
+
+@keyframes pulsar {
+  from {background-color: yellow; border-color: yellow}
+  to {background-color: yellow; border-color: yellow}
 }
