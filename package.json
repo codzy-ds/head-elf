@@ -11,6 +11,7 @@
     "lodash": "^4.16.4",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-router": "^2.8.1",
     "reflux": "^0.4.1"
   },
   "scripts": {

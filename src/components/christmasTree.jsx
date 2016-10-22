@@ -20,17 +20,4 @@ class ChristmasTree extends React.Component {
   }
 }
 
-/* <div className="fir">
-  <div className="fir__item"></div>
-  <div className="fir__item"></div>
-  <div className="fir__item"></div>
-
-  <div className="fir__log"></div>
-
-  <div className="orbs orbs-1"></div>
-  <div className="orbs orbs-2"></div>
-  <div className="orbs orbs-3"></div>
-  <div className="orbs orbs-4"></div>
-</div> */
-
 export default ChristmasTree

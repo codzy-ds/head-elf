@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (<div className="App-header">
-    {<ul id="bauble-container">
+    <ul id="bauble-container">
       <li>
         <div className="bauble red-bauble"></div>
       </li>
@@ -15,7 +15,7 @@ const Header = () => {
       <li>
         <div className="bauble green-bauble"></div>
       </li>
-    </ul>}
+    </ul>
   </div>)
 }
 

@@ -21,7 +21,6 @@ class Intro extends React.Component {
 
   render() {
     let info = this.state
-    console.log(info.info)
     return (<p>{info.info}</p>)
   }
 }
