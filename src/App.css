@@ -167,3 +167,9 @@
 	background: -moz-radial-gradient(center 45deg,circle cover, #d1e5b2, #4d8d00);
 	background: -webkit-gradient(radial, 40% 40%, 0, 40% 40%, 50, from(#d1e5b2), to(#4d8d00));
 }
+
+.control {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}

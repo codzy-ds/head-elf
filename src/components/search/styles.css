@@ -1,0 +1,40 @@
+.trickRow {
+  border: solid 1px gray;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 5px 5px 5px 5px;
+  margin: 5px;
+}
+
+.trickRow:first-child {
+  background: rgba(150, 250, 0, 0.15);
+}
+
+.trickRow:nth-child(2n) {
+  background: rgba(250, 150, 0, 0.15);
+}
+
+.trickRow:hover {
+  background: rgba(150, 250, 0, 0.50);
+}
+
+.trickTitle {
+  display: flex;
+  align-content: flex-start;
+  font-family: cursive;
+  font-style: italic;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.trickDescription {
+  text-align: left;
+  font-family: monospace;
+  margin: 1em;
+}
+
+.tags {
+  text-align: left;
+  font-size: 12px;
+}

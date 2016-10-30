@@ -1,5 +1,6 @@
 import React from 'react'
 import trickStore from './randomTrickStore'
+import { browserHistory } from 'react-router'
 import './styles.css'
 
 class Fortune extends React.Component {
@@ -25,6 +26,10 @@ class Fortune extends React.Component {
     trickStore.getRandomTrick()
   }
 
+  handleSearchRedirect() {
+    browserHistory.push('/search')
+  }
+
   render() {
     let trick = this.state.trick;
 
@@ -34,7 +39,7 @@ class Fortune extends React.Component {
       <div className="control">
         <div className="buttons">
           <button className="refresh" onClick={this.handleRefresh}><span className="arrow-refresh">&#x21bb;</span> Refresh</button>
-          <button className="search">Search</button>
+          <button className="search" onClick={this.handleSearchRedirect}>Search</button>
         </div>
       </div>
     </div>)
