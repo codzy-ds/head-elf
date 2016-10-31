@@ -1,8 +1,5 @@
 import React from 'react'
 import './styles.css'
-{/* <label className="input__label input__label--nao" htmlFor={props.id}>
-  <span className="input__label-content input__label-content--nao">{props.label}</span>
-</label> */}
 
 const TextField = (props) => {
   return (<span className="input input--nao">
