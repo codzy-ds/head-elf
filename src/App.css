@@ -29,6 +29,13 @@
   justify-content:
 }
 
+@media screen and (max-width: 700px) {
+  .side-bar {
+    visibility: hidden;
+    display: none;
+  }
+}
+
 .side-bar {
   width: 20vw;
 }
