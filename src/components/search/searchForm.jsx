@@ -11,6 +11,18 @@ class SearchForm extends React.Component {
     this.state = searchFormStore.getModel()
   }
 
+  componentDidMount() {
+    this.unsubscribe = searchFormStore.listen(this.onStatusChange.bind(this));
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe()
+  }
+
+  onStatusChange() {
+    this.setState(searchFormStore.getModel())
+  }
+
   sendSearchAction = () => {
     let syntheticEvent = {
       title: this.state.title
