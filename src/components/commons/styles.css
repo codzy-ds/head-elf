@@ -2,9 +2,9 @@
   position: relative;
   z-index: 1;
   display: inline-block;
-  margin: 1em;
+  /*margin: 1em;*/
   max-width: 400px;
-  width: calc(100% - 2em);
+  width: 100%;
   vertical-align: top;
 }
 
@@ -12,8 +12,8 @@
   position: relative;
   display: block;
   float: right;
-  padding: 0.8em;
-  width: 60%;
+  /*padding: 0.8em;*/
+  /*width: 60%;*/
   border: none;
   border-radius: 0;
   background: #f0f0f0;
@@ -41,7 +41,7 @@
 
 .input--nao {
   overflow: hidden;
-  padding-top: 1em;
+  /*padding-top: 1em;*/
 }
 
 .input__field--nao {

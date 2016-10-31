@@ -12,6 +12,7 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-router": "^2.8.1",
+    "react-select": "^1.0.0-rc.2",
     "reflux": "^0.4.1"
   },
   "scripts": {

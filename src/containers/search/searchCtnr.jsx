@@ -2,6 +2,7 @@ import React from 'react'
 import SearchForm from '../../components/search/searchForm'
 import searchTrickStore from './searchTrickStore'
 import TrickList from '../../components/search/TrickList'
+import './style.css'
 
 class SearchWindow extends React.Component {
 
@@ -23,7 +24,6 @@ class SearchWindow extends React.Component {
   }
 
   searchTricks = (event) => {
-    console.log('111111111111111111111111111')
     searchTrickStore.getSearchTricks(event)
   }
 
@@ -34,7 +34,8 @@ class SearchWindow extends React.Component {
   render() {
     return (<div>
       <SearchForm searchAction={this.searchTricks} />
-      <div>_</div>
+      <div className="divider">
+     </div>
       <TrickList tricks={this.state.tricks} onClick={this.clickRow}/>
     </div>)
     }

@@ -38,3 +38,13 @@
   text-align: left;
   font-size: 12px;
 }
+
+.searchForm {
+  width: 75%;
+  padding: 1em;
+}
+
+.searchForm > .Select, .input {
+  display: block;
+  margin-bottom: 2px;
+}
