@@ -1,8 +1,9 @@
 import Reflux from 'reflux'
 import fetch from 'axios'
+import config from '../../config/config'
 
 const fetchInfo = (callback) => {
-  fetch('http://localhost:3001/info/').then((respond) => {
+  fetch(config.api + 'info/').then((respond) => {
     callback(respond.data)
   })
 }

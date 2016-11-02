@@ -25,7 +25,9 @@ class SearchForm extends React.Component {
 
   sendSearchAction = () => {
     let syntheticEvent = {
-      title: this.state.title
+      title: this.state.title,
+      personality: this.state.selectedPersonality,
+      tags: this.state.selectedTags
     }
     this.props.searchAction(syntheticEvent)
   }

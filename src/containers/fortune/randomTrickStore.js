@@ -1,9 +1,9 @@
 import Reflux from 'reflux'
 import fetch from 'axios'
+import config from '../../config/config'
 
 const fetchTrick = (callback) => {
-  const rand = Math.floor(Math.random() * 100)
-  fetch('http://localhost:3001/tricks/'+rand).then((respond) => {
+  fetch(config.api + 'tricks/random').then((respond) => {
     callback(respond.data)
   })
 }

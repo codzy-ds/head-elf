@@ -1,9 +1,10 @@
 import Reflux from 'reflux'
 import axios from 'axios'
 import _ from 'lodash'
+import config from '../../config/config'
 
 const searchFormData = (callback) => {
-  axios.all([axios.get('http://localhost:3001/tags'),axios.get('http://localhost:3001/personalities')]).then(axios.spread((tagsRes, personalityRes) => {
+  axios.all([axios.get(config.api + 'tags'),axios.get(config.api + 'personalities')]).then(axios.spread((tagsRes, personalityRes) => {
     callback(tagsRes.data, personalityRes.data)
   }))
 }

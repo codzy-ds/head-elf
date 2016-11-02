@@ -1,8 +1,9 @@
 import Reflux from 'reflux'
 import axios from 'axios'
+import config from '../../config/config'
 
 const searchTricks = (payload, callback) => {
-  axios.get('http://localhost:3001/tricks/', {params: payload}).then((respond) => {
+  axios.get(config.api + 'tricks/', {params: payload}).then((respond) => {
     callback(respond.data)
   })
 }
