@@ -1,5 +1,5 @@
 const config = {
-  api: 'http://localhost:4040/api/'
+  api: 'http://lutin-api.herokuapp.com/api/'
 }
 
 export default config
