@@ -1,5 +1,5 @@
 const config = {
-  api: 'http://lutin-api.herokuapp.com/api/'
+  api: 'https://lutin-api.herokuapp.com/api/'
 }
 
 export default config
