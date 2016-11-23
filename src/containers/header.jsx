@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router'
 
 const Header = () => {
   return (<div className="App-header">
@@ -17,7 +16,6 @@ const Header = () => {
       <div className="bauble green-bauble"></div>
     </li>
   </ul>
-  <div id="ctrlBtns"><Link to='/' id='go-home-btn'>home</Link></div>
 </div>)
 }
 

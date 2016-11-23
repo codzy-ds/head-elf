@@ -1,0 +1,13 @@
+.create-trick-form {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.create-trick-form > textarea {
+  outline: none;
+  font-size: 14px;
+  resize: none;
+  margin: 1em;
+}
