@@ -20,7 +20,6 @@ let searchFormStore = Reflux.createStore({
 
   init() {
     searchFormData((tags, personalities) => {
-      console.log(personalities)
       this.model.tags = tags
       this.model.personalities = _.map(personalities, (personality) => {return personality.type})
       this.trigger()

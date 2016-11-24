@@ -15,6 +15,10 @@
   background: rgba(250, 150, 0, 0.15);
 }
 
+.trickRow:first-child(2n+1) {
+  background: rgba(150, 250, 0, 0.15);
+}
+
 .trickRow:hover {
   background: rgba(150, 250, 0, 0.50);
 }

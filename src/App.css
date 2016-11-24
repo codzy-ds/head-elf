@@ -23,32 +23,12 @@
   font-size: large;
 }
 
-#ctrlBtns {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: -1em;
-}
-
-#go-home-btn:link, #go-home-btn:visited {
-  background-color: white;
-  color: gray;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin-right: 5px;
+.xmasbutton {
+  padding: 5px;
+  border: none;
   border-radius: 5px;
-}
-
-#go-home-btn:hover, #go-home-btn:active {
-  background-color: gray;
-  color: black;
-}
-
-#go-home-btn:hover {
-  background-color: gray;
-  margin-right: 5px;
+  background: linear-gradient(-45deg, red, lightgreen);
+  color: white;
 }
 
 .content {
@@ -58,7 +38,7 @@
   justify-content:
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
   .side-bar {
     visibility: hidden;
     display: none;
