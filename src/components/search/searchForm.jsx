@@ -3,6 +3,7 @@ import _ from 'lodash'
 import TextField from '../commons/textField'
 import searchFormStore from './searchFormStore'
 import Select from 'react-select'
+import TrickTags from '../tags/TricksTags'
 
 class SearchForm extends React.Component {
 
@@ -45,17 +46,13 @@ class SearchForm extends React.Component {
   }
 
   render() {
-    let tagsOptions = _.map(this.state.tags, (tags) => {
-      return {value: tags, label: tags}
-    })
-
     let personalitiesOptions = _.map(this.state.personalities, (personality) => {
       return {value: personality, label: personality}
     })
 
     return(<div className='searchForm'>
       <TextField placeholder='Trick Name' onChange={this.changeValue} label='Trick Name' id='trickName'/>
-      <Select multi simpleValue autoBlur name='tags' value={this.state.selectedTags} options={tagsOptions} onChange={this.changeTags} placeholder='Type of trick'/>
+      <TrickTags changeTags={this.changeTags} />
       <Select simpleValue autoBlur name='personality' value={this.state.selectedPersonality} options={personalitiesOptions} onChange={this.changePersonality} placeholder='Search by personality'/>
       <div className='control'>
         <button className='xmasbutton' onClick={this.sendSearchAction}>Rechercher</button>

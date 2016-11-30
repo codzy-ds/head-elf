@@ -2,7 +2,7 @@ import React from 'react'
 import SearchForm from '../../components/search/searchForm'
 import searchTrickStore from './searchTrickStore'
 import TrickList from '../../components/search/TrickList'
-import { browserHistory } from 'react-router'
+// import { browserHistory } from 'react-router'
 import './style.css'
 
 class SearchWindow extends React.Component {

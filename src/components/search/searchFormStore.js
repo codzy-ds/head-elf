@@ -4,9 +4,9 @@ import _ from 'lodash'
 import config from '../../config/config'
 
 const searchFormData = (callback) => {
-  axios.all([axios.get(config.api + 'tags'),axios.get(config.api + 'personalities')]).then(axios.spread((tagsRes, personalityRes) => {
-    callback(tagsRes.data, personalityRes.data)
-  }))
+  axios.get(config.api + 'personalities').then((personalityRes) => {
+    callback(personalityRes.data)
+  })
 }
 
 let searchFormStore = Reflux.createStore({
@@ -19,8 +19,7 @@ let searchFormStore = Reflux.createStore({
   },
 
   init() {
-    searchFormData((tags, personalities) => {
-      this.model.tags = tags
+    searchFormData((personalities) => {
       this.model.personalities = _.map(personalities, (personality) => {return personality.type})
       this.trigger()
     })

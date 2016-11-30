@@ -1,19 +1,19 @@
 import React from 'react'
 import TextField from '../../components/commons/textField'
-import searchFormStore from '../../components/search/searchFormStore'
+import createTrickStore from './createStore'
 import _ from 'lodash'
-import Select from 'react-select'
 import './styles.css'
+import TricksTags from '../../components/tags/TricksTags'
 
 class CreateTrick extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = searchFormStore.getModel()
+    this.state = createTrickStore.getModel()
   }
 
   componentDidMount() {
-    this.unsubscribe = searchFormStore.listen(this.onStatusChange.bind(this));
+    this.unsubscribe = createTrickStore.listen(this.onStatusChange.bind(this));
   }
 
   componentWillUnmount() {
@@ -21,7 +21,7 @@ class CreateTrick extends React.Component {
   }
 
   onStatusChange() {
-    this.setState(searchFormStore.getModel())
+    this.setState(createTrickStore.getModel())
   }
 
   handleSubmit = (event) => {
@@ -38,22 +38,17 @@ class CreateTrick extends React.Component {
   }
 
   render() {
-    let tagsOptions = _.map(this.state.tags, (tags) => {
-      return {value: tags, label: tags}
-    })
-
     return (<form className='create-trick-form' onSubmit={this.handleSubmit}>
-      <TextField label='Titre'/>
-      <span className='input input--nao'>
-        <textarea placeholder='Description' cols='47' rows='10'/>
-      </span>
-      <TextField label='Images'/>
-      <Select multi simpleValue autoBlur name='tags' value={this.state.selectedTags} options={tagsOptions} onChange={this.changeTags} placeholder='Type of trick'/>
-      <div className='control'>
-        <input type="submit" value="Create" className='xmasbutton'/>
-      </div>
-    </form>)
-  }
+    <TextField label='Titre'/>
+    <span className='input input--nao'>
+      <textarea placeholder='Description' cols='47' rows='10'/>
+    </span>
+    <TricksTags changeTags={this.changeTags} />
+    <div className='control'>
+      <input type="submit" value="Create" className='xmasbutton'/>
+    </div>
+  </form>)
+}
 }
 
 export default CreateTrick
