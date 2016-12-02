@@ -51,9 +51,9 @@ class SearchForm extends React.Component {
     })
 
     return(<div className='searchForm'>
-      <TextField placeholder='Trick Name' onChange={this.changeValue} label='Trick Name' id='trickName'/>
+      <TextField placeholder='Nom du tour' onChange={this.changeValue} label='Nom du tour' id='trickName'/>
       <TrickTags changeTags={this.changeTags} />
-      <Select simpleValue autoBlur name='personality' value={this.state.selectedPersonality} options={personalitiesOptions} onChange={this.changePersonality} placeholder='Search by personality'/>
+      <Select simpleValue autoBlur name='personality' value={this.state.selectedPersonality} options={personalitiesOptions} onChange={this.changePersonality} placeholder='Personalit&eacute; du Lutin'/>
       <div className='control'>
         <button className='xmasbutton' onClick={this.sendSearchAction}>Rechercher</button>
       </div>

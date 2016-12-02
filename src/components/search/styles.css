@@ -50,5 +50,5 @@
 
 .searchForm > .Select, .input {
   display: block;
-  margin-bottom: 2px;
+  margin-bottom: 0.5em;
 }

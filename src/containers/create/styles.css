@@ -8,7 +8,11 @@
 
 .create-trick-form > textarea {
   outline: none;
-  font-size: 14px;
+  font-size: 16rem;
   resize: none;
-  margin: 1em;
+  margin: 0;
+}
+
+.create-trick-form > span, .create-trick-form > div {
+  margin-top: 0.5em;
 }
