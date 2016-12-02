@@ -13,9 +13,10 @@
 }
 
 .imageItem {
-  padding: 1em;
+  padding: 0 1em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border: 1px solid #999999;
   border-radius: 50px;
   margin: 0.5em 3em;
@@ -29,7 +30,7 @@
   bottom: 0;
   margin: auto 0;
   font-size: 30px;
-  color: #cc9a9a;
+  color: #ff9a9a;
   margin-bottom: 11px;
   transition: color 0.2s ease-out;
 }

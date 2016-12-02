@@ -2,12 +2,12 @@ import React from 'react'
 import './addImage.css'
 
 const ImageItem = (props) => {
-  destroy = () => {
+  const destroy = () => {
     props.onDestroy(props.url)
   }
   return(<div className='imageItem'>
     {props.url}
-    <button className="destroy" onClick={props.onDestroy} />
+    <button className="destroy" onClick={destroy} />
   </div>)
 }
 
