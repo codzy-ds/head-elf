@@ -22,7 +22,23 @@
 }
 
 .destroy {
-  content: 'x';
   border: none;
-  background-color: rgb(0,0,0,1);
+  background: none;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  margin: auto 0;
+  font-size: 30px;
+  color: #cc9a9a;
+  margin-bottom: 11px;
+  transition: color 0.2s ease-out;
+}
+
+.destroy:hover {
+  border: none;
+  background: none;
+}
+
+.destroy:after {
+  content: '×';
 }

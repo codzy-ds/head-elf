@@ -13,13 +13,9 @@ class AddImages extends React.Component {
     this.props.onChange(this.state.url)
   }
 
-  destroyItem = () => {
-    console.log('destroy')
-  }
-
   render() {
     let urls = this.props.urls.map((url) => {
-      return(<ImageItem key={url} url={url} onDestroy={this.destroyItem}/>)
+      return(<ImageItem key={url} url={url} onDestroy={this.props.onDestroy}/>)
     })
 
     return (<div>
