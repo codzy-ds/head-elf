@@ -11,6 +11,7 @@ const About = () => {
         Amusez-vous à l'utiliser, entrez vos mauvais coups, cherchez des mauvais coups.<br />
         Cette application viens sans aucune garantie et est pour fins récréationelles seulement.<br />
       </p>
+      <p>Pour ajouter une image à un tour, lors de sa création, mettez le lien vers l'image (http://domain.truc/image.[png|gif|jpg]). L'application ne gère pas le stockage d'image... encore</p>
       <p>
         N'oubliez jamais que l'important lorsqu'on a des lutins de Noël à la maison, c'est de s'amuser!
         Chez Hamsterlabs, on s'amuse comme des fous!
