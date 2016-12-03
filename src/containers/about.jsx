@@ -17,7 +17,7 @@ const About = () => {
         Chez Hamsterlabs, on s'amuse comme des fous!
       </p>
       <h3>Sources</h3>
-      <ul>
+      <ul className='sources'>
         <li><a href='http://www.coupdepouce.com/mamans/loisirs-et-jeux/article/lutins-de-noel-25-idees-de-tours-trouvees-sur-pinterest'>25 coups de lutins - coup de pouce</a></li>
         <li><a href='https://www.pouponsetcie.ca/blogue/la-chasse-aux-lutins/25-idees-de-tours-de-lutin-de-noel/'>35 coups de lutins - Poupons et Cie</a></li>
         <li><a href='http://lutins.dompteurs.com/'>Calentrier de l'avent de lutin</a></li>

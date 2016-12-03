@@ -57,6 +57,22 @@
   width: 75%;
 }
 
+.sources {
+  list-style: none;
+  display: inline-block;
+}
+
+.sources li {
+  border: 1px solid #000000;
+  padding: 0.5em;
+  margin: 1px;
+  width: auto;
+}
+
+.sources li:hover {
+  background-color: lightgreen;
+}
+
 /* General */
 #bauble-container
 {
