@@ -1,5 +1,5 @@
 import React from 'react'
-import createTrickStore from './createStore'
+import trickStore from './trickStore'
 import TextField from '../../components/commons/textField'
 import TricksTags from '../../components/tags/TricksTags'
 import AddImages from '../../components/images/addImages'
@@ -10,11 +10,11 @@ class CreateTrick extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = createTrickStore.getModel()
+    this.state = trickStore.getModel()
   }
 
   componentDidMount() {
-    this.unsubscribe = createTrickStore.listen(this.onStatusChange.bind(this));
+    this.unsubscribe = trickStore.listen(this.onStatusChange.bind(this));
   }
 
   componentWillUnmount() {
@@ -22,20 +22,29 @@ class CreateTrick extends React.Component {
   }
 
   onStatusChange() {
-    this.setState(createTrickStore.getModel())
+    this.setState(trickStore.getModel())
   }
 
-  handleSubmit = (event) => {
-    console.log('submited!', event)
-    event.preventDefault()
+  handleSubmit = () => {
+    let trick = {
+      title: this.state.title,
+      description: this.state.description,
+      tags: this.state.selectedTags,
+      images: this.state.images
+    }
+    trickStore.saveTrick(trick)
   }
 
-  changeValue = (event) => {
+  changeTitle = (event) => {
     this.setState({title: event.target.value})
   }
 
   changeTags = (value) => {
     this.setState({selectedTags: value})
+  }
+
+  changeDescription = (event) => {
+    this.setState({description: event.target.value})
   }
 
   addUrl = (url) => {
@@ -51,17 +60,17 @@ class CreateTrick extends React.Component {
   }
 
   render() {
-    return (<form className='create-trick-form' onSubmit={this.handleSubmit}>
-    <TextField label='Titre'/>
+    return (<div className='create-trick-form'>
+    <TextField label='Titre' onChange={this.changeTitle}/>
     <span className='input input--nao'>
-      <textarea placeholder='Description' cols='47' rows='10'/>
+      <textarea placeholder='Description' cols='54' rows='10' onChange={this.changeDescription}/>
     </span>
     <AddImages urls={this.state.images || []} onChange={this.addUrl} onDestroy={this.removeUrl}/>
     <TricksTags changeTags={this.changeTags} />
     <div className='control'>
-      <input type="submit" value="Create" className='xmasbutton'/>
+      <button className='xmasbutton' onClick={this.handleSubmit}>Cr&eacute;er</button>
     </div>
-  </form>)
+  </div>)
 }
 }
 

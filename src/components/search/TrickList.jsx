@@ -8,10 +8,15 @@ const TrickList = (props) => {
 
   formatedTricks = _.map(formatedTricks, (trick) => {
     let tagsJoined = _.join(trick.tags, ', ')
-    return (<div className="trickRow" onClick={props.onClick} key={trick._id} id={trick._id}>
+
+    const onClick = () => {
+      props.onClick(trick)
+    }
+
+    return (<div className="trickRow" onClick={onClick} key={trick._id} id={trick._id}>
       <div className='trickTitle'>{trick.title}</div>
       <div className='trickDescription'>{trick.description}</div>
-      <div className="tags">{tagsJoined}</div>
+      <div className="tags"><b>{tagsJoined}</b></div>
     </div>)})
 
   return(<div className="trickList">

@@ -1,0 +1,23 @@
+.TagClass {
+  border: 1px solid #8888ff;
+  padding: 0.4em;
+  border-radius: 10px;
+  margin: 0 2px;
+  color: #8888ff;
+}
+
+.trickDetails p {
+  padding: 1em;
+}
+.images-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.trickImage img {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 0.4em;
+  margin: 2px;
+}

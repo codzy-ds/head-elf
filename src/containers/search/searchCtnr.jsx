@@ -1,8 +1,9 @@
 import React from 'react'
 import SearchForm from '../../components/search/searchForm'
 import searchTrickStore from './searchTrickStore'
+import trickStore from '../create/trickStore'
 import TrickList from '../../components/search/TrickList'
-// import { browserHistory } from 'react-router'
+import { browserHistory } from 'react-router'
 import './style.css'
 
 class SearchWindow extends React.Component {
@@ -28,8 +29,9 @@ class SearchWindow extends React.Component {
     searchTrickStore.getSearchTricks(event)
   }
 
-  clickRow = (event) => {
-    console.log('/details/',event.target.id)
+  clickRow = (trick) => {
+    trickStore.setModel(trick)
+    browserHistory.push('/details/')
   }
 
   render() {
