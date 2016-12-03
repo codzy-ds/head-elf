@@ -4,7 +4,9 @@ import config from '../../config/config'
 
 const createTrick = (payload, callback) => {
   axios.post(config.api + 'tricks/', payload).then((respond) => {
-    callback(respond.data)
+    callback(null,respond)
+  }).catch((error) => {
+    callback(error,null)
   })
 }
 
@@ -16,7 +18,8 @@ let trickStore = Reflux.createStore({
       tags: [],
       images:[]
     },
-    status: ''
+    status: '',
+    errors: ''
   },
 
   init() { },
@@ -26,10 +29,14 @@ let trickStore = Reflux.createStore({
     this.model.trick.description = ''
     this.model.trick.tags = []
     this.model.trick.images = []
+    this.model.status = ''
+    this.model.errors = ''
   },
 
   setModel(trick) {
     this.model.trick = trick
+    this.model.status = ''
+    this.model.errors = ''
   },
 
   getModel() {
@@ -37,8 +44,14 @@ let trickStore = Reflux.createStore({
   },
 
   saveTrick(trick) {
-    createTrick(trick, (response) => {
+    createTrick(trick, (err, res) => {
       this.clearModel()
+      if(err) {
+        this.model.status = 500
+        this.model.errors = err
+      } else if(res){
+        this.model.status = 201
+      }
       this.trigger()
     })
   }

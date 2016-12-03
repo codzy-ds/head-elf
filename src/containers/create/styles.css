@@ -6,6 +6,10 @@
   width: 75%;
 }
 
+.status-bar {
+  height: 2em;
+}
+
 .create-trick-form > textarea {
   outline: none;
   font-size: 16rem;
@@ -15,4 +19,44 @@
 
 .create-trick-form > span, .create-trick-form > div {
   margin-top: 0.5em;
+}
+
+.success{
+  align-self: center;
+  position:absolute;
+  text-align: center;
+  background-color: #77ff77;
+  padding: 1em;
+  border: 1px solid #00ff00;
+  border-radius: 10px;
+
+  animation:signup-response 0.5s 1;
+  animation-fill-mode: forwards;
+
+  animation-delay:2s;
+}
+
+.error{
+  align-self: center;
+  position:absolute;
+  text-align: center;
+  background-color: #ff7777;
+  padding: 1em;
+  border: 1px solid #ff0000;
+  border-radius: 10px;
+
+  animation:signup-response 0.5s 1;
+  animation-fill-mode: forwards;
+
+  animation-delay:2s;
+}
+
+@keyframes signup-response{
+  from {opacity :1;}
+  to {opacity :0;}
+}
+
+@-webkit-keyframes signup-response{
+  from {opacity :1;}
+  to {opacity :0;}
 }
