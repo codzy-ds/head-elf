@@ -29,7 +29,7 @@ class CreateTrick extends React.Component {
     let trick = {
       title: this.state.trick.title,
       description: this.state.trick.description,
-      tags: this.state.trick.selectedTags,
+      tags: this.state.trick.selectedTags.split(','),
       images: this.state.trick.images
     }
     trickStore.saveTrick(trick)
